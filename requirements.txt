@@ -1,0 +1,80 @@
+-- =========================================
+-- ANUSHKA PORTFOLIO DATABASE
+-- =========================================
+
+-- Create Projects Table
+CREATE TABLE IF NOT EXISTS projects (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    description TEXT NOT NULL,
+    link TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+-- Create Contact Messages Table
+CREATE TABLE IF NOT EXISTS messages (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    email TEXT NOT NULL,
+    message TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+-- =========================================
+-- INSERT PROJECTS
+-- =========================================
+
+INSERT INTO projects
+(title, description, link)
+VALUES
+(
+    'Smart Student OS',
+    'A student productivity and learning platform for managing tasks, deadlines and learning activities.',
+    'https://github.com/'
+);
+
+
+INSERT INTO projects
+(title, description, link)
+VALUES
+(
+    'MicroNotes',
+    'A short-form learning platform with lessons, quizzes, flashcards and weekly tests.',
+    'https://github.com/'
+);
+
+
+INSERT INTO projects
+(title, description, link)
+VALUES
+(
+    'Emergency Report App',
+    'An emergency reporting application designed to help users report emergency situations.',
+    'https://github.com/'
+);
+
+
+INSERT INTO projects
+(title, description, link)
+VALUES
+(
+    'QualityLink Pro',
+    'A platform that connects businesses with verified professionals for technical and software services.',
+    'https://github.com/'
+);
+
+
+-- =========================================
+-- VIEW PROJECTS
+-- =========================================
+
+SELECT * FROM projects;
+
+
+-- =========================================
+-- VIEW CONTACT MESSAGES
+-- =========================================
+
+SELECT * FROM messages;
